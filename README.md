@@ -24,3 +24,13 @@ Run `git branch -d nombre_rama`<br>
 ## pagina demo
 
 Run https://macc001.github.io/practica-angular000-juegoCartas/<br>
+
+## configuracion compilacion
+
+    tiene que ir entre comentario para subir la pagina a gitPages se encuentra en index.html
+    luego desabilitar para subir a banahosting -->
+    -- <base href="/" />
+
+    cambiar ruta de compilacion en angular dirigirse
+    a las raiz y edita archivo angular.json
+    -- "outputPath": "docs",
