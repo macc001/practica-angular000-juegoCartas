@@ -1,0 +1,110 @@
+<div class="body-content">
+  <div
+    class="card text-white bg-secondary mb-3 animate__animated animate__bounceInLeft"
+  >
+    <div class="card-header text-center">
+      Lista de Jugadores
+    </div>
+    <div class="card-body">
+      <div class="text-center margin-button">
+        <button class="btn btn-light margin-le">
+          <i class="fa fa-plus"></i>
+        </button>
+        <button class="btn btn-light margin-le">
+          <i class="fa fa-eraser" (click)="resetDatos()"></i>
+        </button>
+      </div>
+      <div *ngIf="listas.length === 0; else userData" class="text-center">
+        No hay jugadores
+      </div>
+      <ng-template #userData>
+        <div class="table-responsive">
+          <table class="table table-dark table-striped">
+            <thead class="color-header">
+              <tr>
+                <th scope="col">Nombre</th>
+                <th scope="col"><i class="fa fa-star"></i></th>
+                <th scope="col"><i class="fa fa-trophy"></i></th>
+                <th scope="col" class="text-center">Opcion</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let dato of listas; let i = index">
+                <td>{{ dato.nombre }}</td>
+                <td>{{ dato.jueGana }}</td>
+                <td>{{ dato.ptos }}</td>
+                <td class="d-flex justify-content-around">
+                  <i class="fa fa-pencil"></i>
+                  <i
+                    class="fa fa-plus"
+                    data-toggle="modal"
+                    data-target="#exampleModal"
+                  ></i>
+                  <i class="fa fa-trash-o" (click)="eliminar(i)"></i>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </ng-template>
+    </div>
+  </div>
+</div>
+
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog" role="document">
+    <div class="modal-content animate__animated animate__bounceInDown">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button
+          type="button"
+          class="close"
+          data-dismiss="modal"
+          aria-label="Close"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="container text-center">
+          <div class="row">
+            <div class="col-12 col-sm-12">
+              <button style="width: 50px; height: 50px; margin: 3px;">
+                1
+              </button>
+              <button style="width: 50px; height: 50px; margin: 3px;">2</button>
+              <button style="width: 50px; height: 50px; margin: 3px;">3</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <button style="width: 50px; height: 50px; margin: 3px;">4</button>
+              <button style="width: 50px; height: 50px; margin: 3px;">5</button>
+              <button style="width: 50px; height: 50px; margin: 3px;">6</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <button style="width: 50px; height: 50px; margin: 3px;">7</button>
+              <button style="width: 50px; height: 50px; margin: 3px;">8</button>
+              <button style="width: 50px; height: 50px; margin: 3px;">9</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

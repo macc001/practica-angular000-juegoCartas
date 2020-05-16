@@ -1,27 +1,26 @@
-# JuegoCartas
+# JuegoCartas v0.0.0
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.3.
+Juegos de cartas(al anote).
 
-## Development server
+# librerias a utilizar
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+    https://animate.style/
+    https://getbootstrap.com/docs/4.3/getting-started/introduction/
+    https://fontawesome.com/v4.7.0/icons/
 
-## Code scaffolding
+## comando git
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `git init`<br>
+Run `git add .`<br>
+Run `git status`<br>
+Run `git commit -m "primer commit"`<br>
+Run `git remote add origin https://github.com/macc001/practica-angular000-juegoCartas.git`<br>
+Run `git push -u origin master`<br>
+Run `git checkout nombre_rama`<br>
+Run `git merge nombre_rama`<br>
+Run `git branch nombre_rama`<br>
+Run `git branch -d nombre_rama`<br>
 
-## Build
+## pagina demo
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Run https://macc001.github.io/practica-angular000-juegoCartas/<br>
