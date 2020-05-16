@@ -32,4 +32,12 @@ export class AnoteComponent implements OnInit {
       this.listas.splice(index, 1);
     }
   }
+
+  editar(index: number) {
+    console.log("editar", index);
+  }
+
+  guardar(tipo: string) {
+    console.log("guardar", tipo);
+  }
 }
