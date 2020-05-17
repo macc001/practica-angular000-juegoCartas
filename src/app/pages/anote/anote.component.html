@@ -64,54 +64,35 @@
     class="info-content animate__animated animate__bounceInLeft"
   >
     <div class="card bg-secondary">
-      <div class="card-header" id="headingOne">
+      <div class="card-header">
         <h5 class="mb-0">
           <button
             class="btn btn-link info-boton"
             data-toggle="collapse"
             data-target="#collapseOne"
-            aria-expanded="true"
-            aria-controls="collapseOne"
           >
-            Collapsible Group Item #1
+            Informacion sobre
           </button>
         </h5>
       </div>
-
-      <div
-        id="collapseOne"
-        class="collapse"
-        aria-labelledby="headingOne"
-        data-parent="#accordion"
-      >
-        <div class="card-body info-jugador">
-          Anim pariatur cliche reprehenderit, enim eiusmod high
-        </div>
+      <div id="collapseOne" class="collapse" data-parent="#accordion">
+        <div class="card-body info-jugador">juegos ganados</div>
       </div>
     </div>
     <div class="card bg-secondary">
-      <div class="card-header" id="headingOne">
+      <div class="card-header">
         <h5 class="mb-0">
           <button
             class="btn btn-link info-boton"
             data-toggle="collapse"
             data-target="#collapseDos"
-            aria-expanded="true"
-            aria-controls="collapseOne"
           >
-            Collapsible Group Item #1
+            Informacion sobre
           </button>
         </h5>
       </div>
-      <div
-        id="collapseDos"
-        class="collapse"
-        aria-labelledby="headingOne"
-        data-parent="#accordion"
-      >
-        <div class="card-body info-jugador">
-          Anim pariatur cliche reprehenderit, enim eiusmod high
-        </div>
+      <div id="collapseDos" class="collapse" data-parent="#accordion">
+        <div class="card-body info-jugador">juegos ganados</div>
       </div>
     </div>
   </div>
@@ -147,7 +128,7 @@
                   <input
                     type="text"
                     class="form-control mx-sm-3"
-                    placeholder="Introducir nombre"
+                    placeholder="Editar nombre"
                   />
                 </div>
               </form>
@@ -250,12 +231,32 @@
       </div>
       <div class="modal-body">
         <div class="container text-center">
-          <input
-            class="form-control"
-            type="text"
-            placeholder="Sumar"
-            disabled
-          />
+          <div class="row">
+            <div class="col-4">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="15"
+                [disabled]="true"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Sumar"
+                [disabled]="false"
+              />
+            </div>
+            <div class="col-4">
+              <input
+                class="form-control"
+                type="text"
+                placeholder="Result"
+                [disabled]="true"
+              />
+            </div>
+          </div>
           <div class="row">
             <div class="col-12 col-sm-12">
               <button class="boton-suma">
@@ -277,6 +278,14 @@
               <button class="boton-suma">7</button>
               <button class="boton-suma">8</button>
               <button class="boton-suma">9</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm">
+              <button class="boton-suma">0</button>
+              <button class="boton-suma">
+                <i class="fa fa-backward"></i>
+              </button>
             </div>
           </div>
         </div>

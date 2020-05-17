@@ -1,5 +1,6 @@
 # JuegoCartas v0.0.0
 
+ng new my-sassy-app --style=scss
 Juegos de cartas(al anote).
 
 # librerias a utilizar

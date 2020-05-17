@@ -1,7 +1,12 @@
 import { Component, OnInit } from "@angular/core";
 import { AnoteModels } from "src/app/models/anote.models";
 import { AnoteService } from "../../service/anote.service";
-
+import {
+  FormControl,
+  FormGroup,
+  FormBuilder,
+  Validators,
+} from "@angular/forms";
 @Component({
   selector: "app-anote",
   templateUrl: "./anote.component.html",
@@ -9,11 +14,18 @@ import { AnoteService } from "../../service/anote.service";
 })
 export class AnoteComponent implements OnInit {
   listas: AnoteModels[];
+  forma: FormGroup;
 
-  constructor(private anoteS: AnoteService) {
+  constructor(private anoteS: AnoteService, private fb: FormBuilder) {
     this.listas = JSON.parse(localStorage.getItem("datos")) || [];
+    this.crearFormulario();
   }
 
+  crearFormulario() {
+    this.forma = this.fb.group({
+      descripcion: ["", [Validators.required]],
+    });
+  }
   ngOnInit(): void {}
 
   resetDatos() {
